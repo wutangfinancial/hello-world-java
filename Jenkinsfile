@@ -9,5 +9,10 @@ pipeline {
                 echo 'Hello World'
             }
         }
+        stage('Compile') {
+            steps {
+                sh 'javac HelloWorld.java'
+            }
+	}
     }
 }
