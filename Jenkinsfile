@@ -21,7 +21,9 @@ pipeline {
 	}
 	stage('Tag') {
 	    steps {
-                VERSION = readFile('VERSION').trim() 
+		script {
+                	VERSION = readFile('VERSION').trim() 
+		}
                 sh "git tag -a ${VERSION} -m \"\""
                 sh 'git push'
 	    }
