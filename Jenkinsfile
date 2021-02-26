@@ -14,5 +14,10 @@ pipeline {
                 sh 'javac HelloWorld.java'
             }
 	}
+        stage('Execute') {
+            steps {
+                sh 'java HelloWorld'
+            }
+	}
     }
 }
