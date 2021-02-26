@@ -24,7 +24,9 @@ pipeline {
 		script {
                 	VERSION = readFile('VERSION').trim() 
 		}
-                sh "git tag -a ${VERSION} -m \"\""
+		sh "git config user.email \"wutangfincial@detwa.com\""
+  		sh "git config --global user.name \"Dirt McGirt\""
+                sh "git tag -a ${VERSION} -m \"a tag\""
                 sh 'git push'
 	    }
 	}
