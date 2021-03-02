@@ -5,7 +5,9 @@ pipeline {
     }
     stages {
         stage('Get Info') {
-            sh '$SHELL --version'
+            steps {
+                sh '$SHELL --version'
+            }
         }
         stage('Print Hello World') {
             steps {
