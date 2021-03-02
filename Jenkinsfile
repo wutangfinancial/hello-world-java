@@ -26,8 +26,8 @@ pipeline {
 		}
 		sh "git config user.email \"wutangfincial@detwa.com\""
   		sh "git config --global user.name \"Dirt McGirt\""
-                sh "git tag -a ${VERSION} -m \"a tag\""
-                sh 'git push --tags'
+        sh "git tag -a ${VERSION} -m \"a tag\""
+        sh 'git push --tags'
 	    }
 	}
     }
