@@ -19,7 +19,7 @@ pipeline {
 	}
         stage('Execute aka Test') {
             steps {
-                sh 'java HelloWorld | grep \"Hello World"\'
+                sh 'java HelloWorld'
             }
 	}
         // stage('Tag') {
