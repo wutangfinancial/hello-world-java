@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Get Info') {
             steps {
-                sh '$SHELL --version'
+                sh 'uname -a'
             }
         }
         stage('Print Hello World') {
