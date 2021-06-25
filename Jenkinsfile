@@ -24,17 +24,17 @@ pipeline {
                 sh 'java HelloWorld'
             }
 	}
-        // stage('Tag') {
-        //     steps {
-        //     script {
-        //                 VERSION = readFile('VERSION').trim() 
-        //     }
-        //     sh "git config user.email \"wutangfincial@detwa.com\""
-        //     sh "git config --global user.name \"Dirt McGirt\""
-        //     sh 'git fetch --tags'
-        //     sh "git tag -a ${VERSION} -m \"a tag\""
-        //     sh 'git push origin --tags'
-        //     }
-	    // }
+        stage('Tag') {
+          steps {
+            script {
+                        VERSION = readFile('VERSION').trim() 
+            }
+            sh "git config user.email \"wutangfincial@detwa.com\""
+            sh "git config --global user.name \"Dirt McGirt\""
+            sh 'git fetch --tags'
+            sh "git tag -a ${VERSION} -m \"a tag\""
+            sh 'git push origin --tags'
+            }
+	  }
     }
 }
